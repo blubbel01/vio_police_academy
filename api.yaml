@@ -1,0 +1,138 @@
+openapi: 3.0.4
+info:
+  title: Vio-V API
+  version: 1.0.0
+  description: Unofficial OpenAPI spec for the Vio-V API
+
+servers:
+  - url: https://apiv1.vio-v.com/api/v3
+
+paths:
+  /self:
+    get:
+      summary: Get self player information
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    type: integer
+                  AccountID:
+                    type: integer
+                  Name:
+                    type: string
+                  Playingtime:
+                    type: integer
+                  Gender:
+                    type: integer
+                  STVO:
+                    type: integer
+                  VehicleLimit:
+                    type: integer
+                  BusExp:
+                    type: integer
+                  Spawn:
+                    type: string
+                  SpawnID:
+                    type: integer
+                  Wanteds:
+                    type: integer
+                  JailTime:
+                    type: integer
+                  MethTime:
+                    type: integer
+                  WeaponLicenseA:
+                    type: integer
+                  WeaponLicenseB:
+                    type: integer
+                  WeaponLicenseC:
+                    type: integer
+                  ActivityTimestamp:
+                    type: integer
+                  QuestID:
+                    type: string
+                  QuestStatus:
+                    type: integer
+                  PhoneNumber:
+                    type: integer
+                  FactionTime:
+                    type: integer
+                  Grade:
+                    type: number
+                    format: float
+                  Raiting:
+                    type: integer
+                  DrivingLicenseA:
+                    type: integer
+                  FoodStatus:
+                    type: integer
+                  ActivityStep:
+                    type: integer
+                  DrivingLicensesBlockedTimestamp:
+                    type: integer
+                  WantedArchiv:
+                    type: string
+                  Skin:
+                    type: string
+                  Skills:
+                    type: string
+                  DailyQuests:
+                    type: string
+                  BonusVehicleLimit:
+                    type: integer
+                  Accessory:
+                    type: string
+                  Achievements:
+                    type: string
+                  TotalStatus:
+                    type: string
+                  ActiveStatus:
+                    type: string
+                  SkillPoints:
+                    type: string
+                  SkillBranches:
+                    type: string
+                  SkillSync:
+                    type: integer
+                  Boosts:
+                    type: string
+                  Tattoos:
+                    type: string
+                  Licenses:
+                    type: string
+                  DailyBonus:
+                    type: string
+                  SeasonPass:
+                    type: string
+                  SeasonPassPoints:
+                    type: integer
+                  SeasonPassPremium:
+                    type: integer
+                  WeaponsSkins:
+                    type: string
+                  VehiclesSkins:
+                    type: string
+                  HalloweenCount:
+                    type: integer
+                  LoginTimestamp:
+                    type: integer
+                  RegisterTimestamp:
+                    type: string
+                    format: date-time
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+
+
+
